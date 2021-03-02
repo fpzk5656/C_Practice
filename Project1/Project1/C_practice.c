@@ -2,39 +2,30 @@
 
 int main()
 {
-	// 선택정렬(Selection Sort)
-	
-	//시간 복잡도는 O(N^2)
-	//N*(N + 1) / 2
+	// 버블 정렬(Bubble Sort) 알고리즘
 
-	int i, j, min, index, temp;
-	int array[10] = { 1,10,6,7,2,3,4,8,5,9 };
-	for (int i = 0; i < 10; i++)
+	//옆에 있는 숫자와 비교해서 더 작은 것을 앞으로 보내는 것
+	//구현은 쉽지만 가장 비효율적임
+
+	int i, j, temp;
+	int arr[10] = { 1,4,9,6,5,3,7,2,8,10 };
+
+	for (i = 0; i < 10; i++)
 	{
-		min = 9999;
-		for (int j = i; j < 10; j++)
+		for (j = 0; j < 9 - i; j++)
 		{
-			//min보다 작은 값은 min에 저장
-			//index에는 그 min값이 있던 인덱스번호를 저장
-			//j의 시작번호가 i이니까 이게 반복되면
-			//현재 i의 번호로부터 끝까지 중에 가장 작은 숫자를 탐색하는 것
-			if (min > array[j])
+			if (arr[j] > arr[j + 1])
 			{
-				min = array[j];
-				index = j;
+				temp = arr[j];
+				arr[j] = arr[j + 1];
+				arr[j + 1] = temp;
 			}
 		}
-		//현재 i에 있는 숫자와
-		//가장 작은 숫자를 바꾼다
-		temp = array[i];
-		array[i] = array[index];
-		array[index] = temp;
 	}
 
-	for (int i = 0; i < 10; i++)
+	for (i = 0; i < 10; i++)
 	{
-		printf("%d ", array[i]);
+		printf("%d ", arr[i]);
 	}
-
 	return 0;
 }

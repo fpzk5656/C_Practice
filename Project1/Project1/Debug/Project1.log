@@ -1,4 +1,2 @@
 ﻿  C_practice.c
-d:\c language\project1\project1\c_practice.c(7): warning C4101: 'j' :참조되지 않은 지역 변수입니다.
-d:\c language\project1\project1\c_practice.c(7): warning C4101: 'i' :참조되지 않은 지역 변수입니다.
   Project1.vcxproj -> D:\C language\Project1\Debug\Project1.exe
